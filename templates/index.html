@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>OpenCV ile Görüntü İşleme</title>
+</head>
+<body>
+    <h1>OpenCV ile Görüntü İşleme</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Gönder">
+    </form>
+    {% if image %}
+        <img src="data:image/png;base64,{{ image }}" alt="işlenmiş görüntü">
+    {% endif %}
+    {% if text %}
+        <p>{{ text }}</p>
+    {% endif %}
+</body>
+</html>
